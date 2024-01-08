@@ -90,7 +90,7 @@ En realidad tiene que ser algo como esto para ser entendido por JS:
   )
 ```
 Esto sucede de forma interna. Es por esto que es más fácil trabajar con una sintaxis muy parecida a HTML (</>) que con JS puro y REACT.
-ℹNOTA: *props* significa propiedad, y aunque es similar a un atributo, NO lo es.
+[!NOTA]: *props* significa propiedad, y aunque es similar a un atributo, NO lo es.
 
 ### 3.1.6 Exportar y Renderizar Componentes 
 
