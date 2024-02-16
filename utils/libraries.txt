@@ -1,0 +1,216 @@
+// MATERIAL FOR DESIGN
+import {
+  Button,
+  Grid,
+  IconButton,
+  MuiThemeProvider,
+  TablePagination,
+  TextField,
+  Typography,
+} from "@material-ui/core";
+import color from "../styles/colors";
+import { makeStyles, createMuiTheme } from "@material-ui/core/styles";
+import DeleteSweepIcon from "@material-ui/icons/DeleteSweep";
+import NoteAddIcon from "@material-ui/icons/NoteAdd";
+import DocAddIcon from "@material-ui/icons/NoteAdd";
+import SearchIcon from "@material-ui/icons/Search";
+import VisibilityIcon from "@material-ui/icons/Visibility";
+import DeleteIcon from "@material-ui/icons/Delete";
+import Bajar from "@material-ui/icons/ArchiveRounded";
+
+// STYLES
+
+const colores = {
+  BLANCO: "#FFFFFF",
+  NEGRO: "#000000",
+
+  AZUL: "#004666",
+  AZUL2: "#80b0c8",
+  AZUL3: "#4d5656",
+  AZUL5: "#21618c",
+  AZUL6: "#000099",
+
+  ROSA: "#ffcdd2",
+  /* Para efecto hover */
+  AZUL4: "#6F98AC",
+  NEGRO2: "#424242",
+
+  GRIS: "#4c5356",
+  GRIS2: "#a8adb3",
+  GRIS3: "#616a6b",
+
+  VERDE: "#95a844",
+  VERDE2: "#c2cca6",
+  VERDE3: "#1b5e20",
+  VERDE4: "#c0ca33",
+  VERDE5: "#827717",
+  VERDE6: "#BDB76B",
+  VERDE7: "#336600",
+  VERDE8: "#28b463",
+
+  ROJO: "#5f1939",
+  ROJO2: "#a21e4d",
+  ROJO3: "#f44336",
+  ROJO4: "#ff1744",
+  ROJO5: "#d50000",
+
+  AMARILLO: "#d8aa00",  
+  AMARILLO2: "#ffab00",
+  AMARILLO3: "#FFF347",
+  AMARILLO4: "#fff9c4",
+
+  CAFE: "#5d4037",
+
+  NARANJA: "orange",
+  NARANJA2: "#FF5A22",
+
+  MORADO: "#633974",
+  CAFE1: "#CD5C5C"
+};
+
+export default colores;
+
+  const useStyles = makeStyles((theme) => ({
+    root: {
+      background: color.GRIS,
+      color: color.NEGRO,
+      height: windowHeight,
+      width: windowWidth,
+      marginTop: 14,
+      "& > *": {
+        padding: "0 90px 0 90px",
+        background: color.GRIS,
+        color: color.NEGRO,
+        height: "auto",
+        width: "auto",
+      },
+    },
+    addNew: {
+      display: "inline-flex",
+      justifyContent: "flex-end",
+      alignItems: "center",
+      minWidth: "100%",
+      color: color.BLANCO,
+    },
+    txtField: {
+      marginLeft: "8px",
+      marginRight: "10px",
+      color: color.BLANCO,
+      textAlign: "left",
+    },
+    title: {
+      minWidth: 350,
+    },
+    buttonAddNew: {
+      backgroundColor: color.AZUL,
+      color: color.BLANCO,
+      "&:hover": {
+        backgroundColor: color.AZUL2,
+        color: color.NEGRO,
+      },
+    },
+    btn: {
+      color: color.VERDE3,
+    },
+    btnDlt: {
+      color: color.ROJO2,
+    },
+    btnVisiDoc: {
+      color: color.AZUL,
+    },
+    btnEliminar: {
+      color: color.ROJO2,
+    },
+
+  }));
+
+      /* TABLE TITLE */}
+      <div className={classes.root}>
+        <div style={{ textAlign: "center", padding: "60px 0 0 0" }}>
+          <Typography
+            variant="h3"
+            style={{
+              color: color.BLANCO,
+              fontSize: 25,
+              fontWeight: "900",
+            }}>
+            POKES
+          </Typography>
+        </div>
+
+        <Grid container>
+          {/* BUTTONS */}
+          {/* BUTTON: SEARCH FOR */}
+          <Grid
+            item
+            xs={12}
+            style={{ display: "flex", padding: "0 70px 50px 70px" }}>
+            <Grid item xs={6}>
+              <SearchIcon style={{ color: color.BLANCO }} />
+              <TextField
+                placeholder="Buscar"
+                className={classes.txtField}
+                id="txtSearch"
+                value={buscar}
+                onChange={(e) => {setBuscar(e.target.value);}}
+                onKeyUp={(e) => e.which === 13 && busqueda(e.target.value)}>
+                Buscar
+              </TextField>
+            </Grid>
+
+ {/* FIELDS/COLUMNS */}
+          <Grid container item xs={20} style={{ padding: "0 70px 20px 70px" }}>
+            <Grid
+              container
+              style={{
+                background: color.AZUL,
+                borderBottom: `1px solid ${color.BLANCO}`,
+              }}>
+               {/* COLUMN: POKES */}
+              <Grid
+                item
+                xs={1}
+                style={{
+                  textAlign: "center",
+                  color: color.BLANCO,
+                  borderRadius: "5px",
+                  padding: "15px 0 15px 0",
+                }}>
+                Pokes
+              </Grid>
+              {/* COLUMN: TRAPPED */}
+              <Grid
+                item
+                xs={3}
+                style={{
+                  textAlign: "center",
+                  color: color.BLANCO,
+                  borderRadius: "5px",
+                  padding: "15px 0 15px 0",
+                }}>
+                Pending
+              </Grid>
+              <Grid
+                item
+                xs={3}
+                style={{
+                  textAlign: "center",
+                  color: color.BLANCO,
+                  borderRadius: "5px",
+                  padding: "15px 0 15px 0",
+                }}>
+                Usuario que cargó el documento
+              </Grid>
+              {/* COLUMN: PENDING */}
+              <Grid
+                item
+                xs={3}
+                style={{
+                  textAlign: "center",
+                  color: color.BLANCO,
+                  borderRadius: "5px",
+                  padding: "15px 0 15px 0",
+                }}>
+                Trapped
+              </Grid>
+            </Grid>
