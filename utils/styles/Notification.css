@@ -1,0 +1,72 @@
+.success {
+    background: #aed581 !important;
+  }
+  .error {
+    background: #e57373 !important;
+  }
+  .info {
+    background: #64b5f6 !important;
+  }
+  .warning {
+    background: #fff176 !important;
+    color: #000000 !important;
+  }
+  .loader {
+    background: #000000 !important;
+    color: #ffffff !important;
+  }
+  .icon {
+    font-size: 20;
+  }
+  .iconVariant {
+    opacity: 0.9;
+    margin-right: 0.2em;
+  }
+  .mensaje {
+    display: "flex";
+    align-items: "center";
+  }
+  .dispFlex {
+    display: inline-block;
+  }
+  
+  .spinner,
+  .spinner:after {
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    margin-top: -5px;
+    margin-left: -4px;
+    border-radius: 50%;
+    z-index: 2;
+  }
+  .spinner {
+    background-color: transparent;
+    border-top: 7px solid #64b5f6;
+    border-right: 7px solid #64b5f6;
+    border-bottom: 7px solid #64b5f6;
+    border-left: 7px solid #004666;
+    transform: translateZ(0);
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 0.8s;
+    animation-name: spinner-loading;
+  }
+  @keyframes spinner-loading {
+    0% {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(1turn);
+    }
+  }
+  
+  .logoSpiner {
+    background-color: #ffffff;
+    border-radius: 100%;
+    margin: 0px;
+    margin-left: 2px;
+    margin-right: 10px;
+    width: 52px;
+  }
+  
